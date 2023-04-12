@@ -34,9 +34,13 @@
     height: 660px;
   }
 
+  .service-card button {
+    width: 150px;
+  }
+
   /* Utility Classes */
   .container-default {
-    width: min(1150px, 100vw - 2rem);
+    width: min(1200px, 100vw - 2rem);
     margin-inline: auto;
   }
 
