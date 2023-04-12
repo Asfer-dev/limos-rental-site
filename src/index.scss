@@ -1,0 +1,47 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    box-sizing: border-box;
+    font-family: inherit;
+  }
+
+  body,
+  html {
+    min-height: 100vh;
+  }
+
+  input {
+    @apply block w-full py-2 px-4 mb-3 font-thin placeholder:text-gray-600 rounded-[0.6rem] bg-gray-100;
+
+  }
+
+  .nav-link {
+    @apply font-normal text-base text-gray-500 hover:text-black transition;
+    &.active {
+      @apply text-black;
+    }
+  }
+
+  .banner {
+    background-image: url('./assets/banner-image.jpg');
+    background-size: cover;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    height: 660px;
+  }
+
+  /* Utility Classes */
+  .container-default {
+    width: min(1150px, 100vw - 2rem);
+    margin-inline: auto;
+  }
+
+  .container-big {
+    width: 95vw;
+    margin-inline: auto;
+  }
+}
