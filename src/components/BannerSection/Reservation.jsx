@@ -2,7 +2,7 @@ import Button from "../Button";
 
 const Reservation = () => {
   return (
-    <form className="w-[320px] p-8 absolute bottom-24 right-16 shadow-lg bg-white rounded-[1rem] text-left text-[15px]">
+    <form className="reserve-card w-[320px] p-8 absolute bottom-24 right-16 shadow-lg bg-white rounded-[1.5rem] text-left text-[15px] hidden md:block">
       <input placeholder="Pick Up Address" type="text" />
       <input placeholder="Drop Off Address" type="text" />
       <select

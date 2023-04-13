@@ -2,7 +2,7 @@ import Button from "../Button";
 import Reservation from "./Reservation";
 const BannerSection = () => {
   return (
-    <div className="banner relative container-big rounded-[1rem] text-center">
+    <div className="banner relative container-big rounded-[1.5rem] text-center">
       <h1 className="text-5xl md:text-7xl font-semibold pt-8 tracking-wide">
         Luxury Limo Hire
       </h1>

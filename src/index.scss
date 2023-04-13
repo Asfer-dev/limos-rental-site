@@ -14,13 +14,13 @@
     min-height: 100vh;
   }
 
-  input {
-    @apply block w-full py-2 px-4 mb-3 font-thin placeholder:text-gray-600 rounded-[0.6rem] bg-gray-100;
+  .reserve-card input {
+    @apply block w-full py-2 px-4 mb-3 font-thin placeholder:text-neutral-600 rounded-[0.6rem] bg-gray-100;
 
   }
 
   .nav-link {
-    @apply font-normal text-base text-gray-500 hover:text-black transition;
+    @apply font-normal text-base text-neutral-500 hover:text-black transition;
     &.active {
       @apply text-black;
     }
@@ -36,6 +36,13 @@
 
   .service-card button {
     width: 150px;
+  }
+
+  footer a {
+    @apply hover:text-white transition;
+  }
+  footer li {
+    @apply mb-2;
   }
 
   /* Utility Classes */
