@@ -4,7 +4,7 @@ import services from "./services";
 
 const ServicesSection = () => {
   return (
-    <div className="container-default mt-16">
+    <div className="container-default mt-32">
       <SectionHeading
         title="Services"
         text="We invite you to try our services, and we personally guarantee that

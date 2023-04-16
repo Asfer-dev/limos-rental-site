@@ -14,7 +14,7 @@ const FeatureItem = ({ text }) => {
 
 const FeaturedSection = () => {
   return (
-    <div className="container-default mt-16">
+    <div className="container-default mt-32">
       <h1 className="font-semibold text-4xl md:text-6xl text-center mb-6">
         Only today $75/day
       </h1>

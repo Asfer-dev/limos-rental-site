@@ -4,7 +4,7 @@ import features from "./features";
 
 const FeaturesSection = () => {
   return (
-    <div className="container-default mt-16">
+    <div className="container-default mt-32">
       <SectionHeading
         title="Why Choose Us"
         text="At LIMOS we pride ourselves in delivering extensive services to fulfill all of your
