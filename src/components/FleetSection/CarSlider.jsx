@@ -11,17 +11,17 @@ const CarSlider = ({ activeTab }) => {
       partialVisibilityGutter: 40,
     },
     desktop: {
-      breakpoint: { max: 3000, min: 768 },
+      breakpoint: { max: 3000, min: 800 },
       items: 3,
       partialVisibilityGutter: 40,
     },
     tablet: {
-      breakpoint: { max: 768, min: 464 },
+      breakpoint: { max: 800, min: 480 },
       items: 2,
       partialVisibilityGutter: 30,
     },
     mobile: {
-      breakpoint: { max: 464, min: 0 },
+      breakpoint: { max: 480, min: 0 },
       items: 1,
       partialVisibilityGutter: 30,
     },

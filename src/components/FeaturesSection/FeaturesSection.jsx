@@ -10,7 +10,7 @@ const FeaturesSection = () => {
         text="At LIMOS we pride ourselves in delivering extensive services to fulfill all of your
          needs with first rate customer care"
       />
-      <div className="features flex flex-col md:flex-row md:space-x-32 space-y-8 md:space-y-0">
+      <div className="features grid sm:grid-cols-2 md:grid-cols-4 gap-8">
         {features.map((feature) => (
           <FeatureCard {...feature} key={feature.id} />
         ))}

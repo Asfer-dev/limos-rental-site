@@ -23,8 +23,8 @@ const FeaturedSection = () => {
         renting a limousine
       </p>
       <div className="p-12 bg-zinc-200 rounded-[1.5rem] relative">
-        <h2 className="text-5xl mb-8 mt-24 md:mt-0">Cadillac Escalade</h2>
-        <ul className="feature-list text-sm text-neutral-600 grid gap-1 grid-cols-2 md:w-5/12 mb-8">
+        <h2 className="text-5xl mb-8 mt-24 sm:mt-0">Cadillac Escalade</h2>
+        <ul className="feature-list text-sm text-neutral-600 grid gap-1 md:grid-cols-2 md:w-6/12 mb-8">
           <FeatureItem text="For upto 8 passengers" />
           <FeatureItem text="Tinted Windows" />
           <FeatureItem text="Incredible Sound System" />
@@ -36,7 +36,7 @@ const FeaturedSection = () => {
         </ul>
         <Button>Reserve Now</Button>
         <img
-          className="w-[620px] absolute -top-12 right-0"
+          className="w-[450px] md:w-[620px] absolute -top-12 sm:top-24 md:-top-12 right-0"
           src={featuredCarImg}
           alt="featured-vehicle"
         />

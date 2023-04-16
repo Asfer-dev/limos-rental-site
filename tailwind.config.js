@@ -5,9 +5,19 @@ export default {
     fontFamily: {
       primary: ["Poppins", "sans-serif"],
     },
+    screens: {
+      sm: "30em",
+      md: "50em",
+      lg: "70em",
+    },
     extend: {
       colors: {
         accent: "#b5d57f",
+      },
+      fontSize: {
+        "5xl": "3rem",
+        "7xl": "4rem",
+        "8xl": "5rem",
       },
     },
   },
