@@ -15,7 +15,7 @@ const FeatureItem = ({ text }) => {
 const FeaturedSection = () => {
   return (
     <div className="container-default mt-32">
-      <h1 className="font-semibold text-4xl md:text-6xl text-center mb-6">
+      <h1 className="font-semibold text-5xl md:text-7xl text-center mb-6">
         Only today $75/day
       </h1>
       <p className="md:w-[50ch] mx-auto text-center text-neutral-600 mb-12">
