@@ -28,23 +28,23 @@ const Header = () => {
             : "absolute z-10 rounded-[1rem] top-20 left-4 right-4 sm:w-96 sm:right-4 sm:left-auto py-8 text-center md:py-0 bg-white md:bg-transparent md:static hidden"
         }
       >
-        <ul className="md:flex md:space-x-12">
+        <ul className="flex flex-col md:flex-row gap-16">
           <li className="">
             <a className="nav-link active" href="#">
               Home
             </a>
           </li>
-          <li className="mt-8 md:mt-0">
+          <li className="">
             <a className="nav-link" href="#">
               Vehicle
             </a>
           </li>
-          <li className="mt-8 md:mt-0">
+          <li className="">
             <a className="nav-link" href="#">
-              Blog
+              Services
             </a>
           </li>
-          <li className="mt-8 md:mt-0">
+          <li className="">
             <a className="nav-link" href="#">
               Contacts
             </a>
@@ -52,7 +52,10 @@ const Header = () => {
         </ul>
       </nav>
       {screenSize >= 800 && (
-        <select name="">
+        <select
+          name=""
+          className="bg-zinc-100/50 border-zinc-400 text-neutral-600 border-2 p-1 rounded-[0.4rem]"
+        >
           <option value="english">Eng</option>
         </select>
       )}

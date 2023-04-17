@@ -2,7 +2,14 @@ import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import cars from "../../cars";
 import SliderCard from "./SliderCard";
+import { useEffect } from "react";
+import Aos from "aos";
+import "aos/dist/aos.css";
 const CarSlider = ({ activeTab }) => {
+  useEffect(() => {
+    Aos.init({ duration: 1000 });
+  }, []);
+
   const responsive = {
     superLargeDesktop: {
       // the naming can be any, depends on you.
@@ -28,7 +35,7 @@ const CarSlider = ({ activeTab }) => {
   };
 
   return (
-    <div className="">
+    <div data-aos="fade-left">
       <Carousel
         responsive={responsive}
         showDots={true}

@@ -7,7 +7,7 @@ const FleetSection = () => {
   const [activeTab, setActiveTab] = useState(1);
 
   return (
-    <div className="mt-32">
+    <div className="mt-32 overflow-x-hidden">
       <div className="container-default">
         <SectionHeading
           title="Our Fleet"

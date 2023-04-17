@@ -1,8 +1,18 @@
 import Button from "../Button";
+import { useEffect } from "react";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 const ServiceCard = ({ image, heading, text }) => {
+  useEffect(() => {
+    Aos.init({ duration: 1000 });
+  }, []);
+
   return (
-    <div className="service-card bg-zinc-100 p-6 rounded-[1.5rem] w-[300px] sm:w-full sm:flex sm:space-x-8 text-sm">
+    <div
+      data-aos="fade-up"
+      className="service-card bg-zinc-100 p-6 rounded-[1.5rem] w-[300px] sm:w-full sm:flex sm:space-x-8 text-sm"
+    >
       <img
         className="card-img w-[260px] rounded-[1rem] mb-8 sm:mb-0"
         src={image}
