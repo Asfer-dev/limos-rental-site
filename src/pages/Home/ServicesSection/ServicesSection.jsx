@@ -1,4 +1,4 @@
-import SectionHeading from "../SectionHeading";
+import SectionHeading from "../../../components/SectionHeading";
 import ServiceCard from "./ServiceCard";
 import services from "./services";
 

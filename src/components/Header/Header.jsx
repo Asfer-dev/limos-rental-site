@@ -25,22 +25,24 @@ const Header = () => {
   }, [screenSize]);
 
   return (
-    <header className="container-big py-6 flex justify-between">
-      <a href="#">
-        <img className="w-28" src={logo} alt="LIMO-logo" />
-      </a>
-      <PrimaryNav screenSize={screenSize} navHidden={navHidden} />
+    <header className="py-6 fixed z-10 bg-white left-0 right-0 top-0">
+      <div className="container-big flex justify-between">
+        <a href="#">
+          <img className="w-28" src={logo} alt="LIMO-logo" />
+        </a>
+        <PrimaryNav screenSize={screenSize} navHidden={navHidden} />
 
-      {screenSize >= screenMd && <LanguageSelector />}
+        {screenSize >= screenMd && <LanguageSelector />}
 
-      {screenSize < screenMd && (
-        <button onClick={() => setNavHidden(!navHidden)} className="text-lg">
-          <FontAwesomeIcon
-            icon={navHidden ? faBars : faXmark} // replacing the hamburger icon with the close button once the nav bar is displayed
-            style={{ color: "#000000" }}
-          />
-        </button>
-      )}
+        {screenSize < screenMd && (
+          <button onClick={() => setNavHidden(!navHidden)} className="text-lg">
+            <FontAwesomeIcon
+              icon={navHidden ? faBars : faXmark} // replacing the hamburger icon with the close button once the nav bar is displayed
+              style={{ color: "#000000" }}
+            />
+          </button>
+        )}
+      </div>
     </header>
   );
 };

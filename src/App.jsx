@@ -1,21 +1,20 @@
 // import "./App.css";
-import BannerSection from "./components/BannerSection/BannerSection";
-import FeaturedSection from "./components/FeaturedSection/FeaturedSection";
-import FeaturesSection from "./components/FeaturesSection/FeaturesSection";
-import FleetSection from "./components/FleetSection/FleetSection";
+import { Route, Routes } from "react-router-dom";
 import Footer from "./components/Footer/Footer";
 import Header from "./components/Header/Header";
-import ServicesSection from "./components/ServicesSection/ServicesSection";
+import Home from "./pages/Home/Home";
+import NotFound from "./pages/NotFound/NotFound";
+import Vehicles from "./pages/Vehicles/Vehicles";
 
 function App() {
   return (
     <>
       <Header />
-      <BannerSection />
-      <ServicesSection />
-      <FleetSection />
-      <FeaturesSection />
-      <FeaturedSection />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/vehicles" element={<Vehicles />} />
+        <Route path="*" element={<NotFound />} />
+      </Routes>
       <Footer />
     </>
   );

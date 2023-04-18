@@ -1,7 +1,7 @@
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-import cars from "../../data/cars";
-import SliderCard from "./SliderCard";
+import cars from "../../../data/cars";
+import SliderCard from "../../../components/SliderCard";
 import { useEffect } from "react";
 import Aos from "aos";
 import "aos/dist/aos.css";

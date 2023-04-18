@@ -1,8 +1,9 @@
-import Button from "../Button";
+import { Link } from "react-router-dom";
+import Button from "../../../components/Button";
 import Reservation from "./Reservation";
 const BannerSection = () => {
   return (
-    <div className="banner relative container-big rounded-[1.5rem] text-center">
+    <div className="banner relative container-big rounded-[1.5rem] text-center mt-24">
       <h1 className="text-5xl md:text-8xl font-semibold pt-8 tracking-wide">
         Luxury Limo Hire
       </h1>
@@ -10,7 +11,9 @@ const BannerSection = () => {
         We offer professional car rental & limousine services in our range of
         high-end vehicles
       </p>
-      <Button>Open Fleet</Button>
+      <Link to={"/vehicles"}>
+        <Button>Open Fleet</Button>
+      </Link>
       <Reservation />
     </div>
   );

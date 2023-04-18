@@ -1,4 +1,4 @@
-import SectionHeading from "../SectionHeading";
+import SectionHeading from "../../../components/SectionHeading";
 import FeatureCard from "./FeatureCard";
 import features from "./features";
 

@@ -1,5 +1,5 @@
-import Button from "../Button";
-import featuredCarImg from "../../assets/cars/car-cadillac-escalade.png";
+import Button from "../../../components/Button";
+import featuredCarImg from "../../../assets/cars/car-cadillac-escalade.png";
 import FeatureItem from "./FeatureItem";
 
 const FeaturedSection = () => {

@@ -1,31 +1,32 @@
 import LanguageSelector from "./LanguageSelector";
+import { NavLink } from "react-router-dom";
 
 const PrimaryNav = ({ navHidden, screenSize }) => {
   return (
     <nav
-      className={`absolute z-10 rounded-[1rem] top-20 left-4 right-4 sm:w-96 sm:right-4 sm:left-auto py-8 text-center md:py-0 bg-white md:bg-transparent md:static ${
+      className={`absolute z-10 rounded-[1rem] top-20 left-4 md:h-full right-4 sm:w-96 sm:right-4 sm:left-auto py-8 text-center md:py-0 bg-white md:bg-transparent md:static ${
         navHidden && "hidden"
       }`}
     >
       <ul className="flex flex-col md:flex-row gap-16 mb-8 md:mb-0 justify-center">
         <li className="">
-          <a className="nav-link active" href="#">
+          <NavLink className="nav-link" to="/">
             Home
-          </a>
+          </NavLink>
         </li>
         <li className="">
-          <a className="nav-link" href="#">
-            Vehicle
-          </a>
+          <NavLink className="nav-link" to="/vehicles">
+            Vehicles
+          </NavLink>
         </li>
         <li className="">
-          <a className="nav-link" href="#">
+          <NavLink className="nav-link" to="/services">
             Services
-          </a>
+          </NavLink>
         </li>
         <li className="">
           <a className="nav-link" href="#">
-            Contacts
+            Contact
           </a>
         </li>
       </ul>

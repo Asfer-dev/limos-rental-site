@@ -57,14 +57,14 @@
       width: 0.6em;
 
       &-track {
-        @apply bg-zinc-300 rounded-full;
+        @apply bg-neutral-400 rounded-full;
       }
 
       &-thumb {
-        @apply bg-zinc-400 rounded-full;
+        @apply bg-neutral-700 rounded-full;
 
         &:hover {
-          @apply bg-zinc-500;
+          @apply bg-zinc-800;
         }
       }
   }

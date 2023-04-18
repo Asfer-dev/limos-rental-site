@@ -1,5 +1,5 @@
 import { useState } from "react";
-import SectionHeading from "../SectionHeading";
+import SectionHeading from "../../../components/SectionHeading";
 import CarSlider from "./CarSlider";
 import Tabs from "./Tabs";
 
