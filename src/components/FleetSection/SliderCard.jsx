@@ -3,18 +3,14 @@ import CapacityItem from "./CapacityItem";
 const SliderCard = ({ index, image, name, seats, luggage }) => {
   return (
     <div
-      className={
-        index === 0
-          ? "slider-card mx-2 pb-8 cursor-pointer md:ml-16"
-          : "slider-card pb-8 mx-2 cursor-pointer"
-      }
+      className={`slider-card mx-2 pb-8 cursor-pointer ${
+        index === 0 && "md:ml-16"
+      }`}
     >
       <div
-        className={
-          index === 0
-            ? "car-image h-[290px] flex items-center justify-center bg-accent/20 rounded-[1.5rem]"
-            : "car-image h-[290px] flex items-center justify-center bg-zinc-100 rounded-[1.5rem]"
-        }
+        className={`car-image h-[290px] flex items-center justify-center ${
+          index === 0 ? "bg-accent/20" : "bg-zinc-100"
+        } rounded-[1.5rem]`}
       >
         <img
           className="car w-80 transition"

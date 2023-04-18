@@ -4,6 +4,7 @@ import Aos from "aos";
 import "aos/dist/aos.css";
 
 const ServiceCard = ({ image, heading, text }) => {
+  // scroll animation
   useEffect(() => {
     Aos.init({ duration: 1000 });
   }, []);

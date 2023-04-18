@@ -1,4 +1,4 @@
-import "./App.css";
+// import "./App.css";
 import BannerSection from "./components/BannerSection/BannerSection";
 import FeaturedSection from "./components/FeaturedSection/FeaturedSection";
 import FeaturesSection from "./components/FeaturesSection/FeaturesSection";

@@ -43,7 +43,7 @@
     @apply py-2 px-3 md:px-5 md:mx-2 rounded-[0.5rem] transition-colors duration-200 ease-in-out;
   }
   
-  form .active, .tabs .active {
+  button.active {
     @apply bg-accent;
   }
 
@@ -51,13 +51,6 @@
     transform: scale(1.04);
     opacity: 0.9;
     transition: transform 250ms ease-in-out, opacity 250ms ease-in-out;
-  }
-
-  footer a {
-    @apply hover:text-white transition;
-  }
-  footer li {
-    @apply mb-2;
   }
 
   /* Utility Classes */

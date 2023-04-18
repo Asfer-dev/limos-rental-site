@@ -1,6 +1,6 @@
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-import cars from "../../cars";
+import cars from "../../data/cars";
 import SliderCard from "./SliderCard";
 import { useEffect } from "react";
 import Aos from "aos";
@@ -43,6 +43,7 @@ const CarSlider = ({ activeTab }) => {
         swipeable={true}
         draggable={true}
       >
+        {/* filtering the car list based on the tab */}
         {cars
           .filter((car) => {
             switch (activeTab) {
