@@ -53,6 +53,23 @@
     transition: transform 250ms ease-in-out, opacity 250ms ease-in-out;
   }
 
+  ::-webkit-scrollbar {
+      width: 0.6em;
+
+      &-track {
+        @apply bg-zinc-300 rounded-full;
+      }
+
+      &-thumb {
+        @apply bg-zinc-400 rounded-full;
+
+        &:hover {
+          @apply bg-zinc-500;
+        }
+      }
+  }
+
+
   /* Utility Classes */
   .container-default {
     width: min(1200px, 100vw - 2rem);
