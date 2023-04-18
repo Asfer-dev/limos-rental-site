@@ -27,8 +27,8 @@ const FeaturedSection = () => {
         <h2 className="text-5xl mb-8 mt-24 sm:mt-0">Cadillac Escalade</h2>
 
         <ul className="feature-list text-sm text-neutral-600 grid gap-1 md:grid-cols-2 md:w-6/12 mb-8">
-          {vehicleFeatures.map((feature) => (
-            <FeatureItem text={feature} />
+          {vehicleFeatures.map((feature, i) => (
+            <FeatureItem text={feature} key={i} />
           ))}
         </ul>
 

@@ -57,7 +57,7 @@ const Footer = () => {
 
         <div className="footer-links flex flex-col md:flex-row md:justify-between md:w-2/3">
           {linkCols.map((col) => (
-            <FooterLinkColumn {...col} />
+            <FooterLinkColumn {...col} key={col.title} />
           ))}
         </div>
       </div>
@@ -73,8 +73,8 @@ const Footer = () => {
         </ul>
 
         <ul className="social-links text-2xl flex gap-6">
-          {socialIcons.map((icon) => (
-            <FooterLink link="#">
+          {socialIcons.map((icon, i) => (
+            <FooterLink link="#" key={i}>
               <FontAwesomeIcon
                 className="text-neutral-400 hover:text-white transition"
                 icon={icon}
