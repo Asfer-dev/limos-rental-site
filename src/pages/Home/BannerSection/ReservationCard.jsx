@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Button from "../../../components/Button";
 
-const Reservation = () => {
+const ReservationCard = () => {
   const [activeMethod, setActiveMethod] = useState(1);
 
   const handleClick = (e, method) => {
@@ -10,7 +10,7 @@ const Reservation = () => {
   };
 
   return (
-    <form className="reserve-card w-[320px] p-8 pt-[4.5rem] absolute bottom-8 right-16 shadow-lg bg-white rounded-[1.5rem] text-left text-[15px] hidden md:block">
+    <form className="reservation reserve-card w-[320px] p-8 pt-[4.5rem] absolute bottom-8 right-16 shadow-lg bg-white rounded-[1.5rem] text-left text-[15px] hidden md:block">
       <div className="text-sm absolute px-3 right-0 left-0 top-4 flex justify-center gap-4">
         <button
           onClick={(e) => handleClick(e, 1)}
@@ -66,4 +66,4 @@ const Reservation = () => {
   );
 };
 
-export default Reservation;
+export default ReservationCard;

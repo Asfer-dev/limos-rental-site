@@ -3,7 +3,7 @@ import CapacityItem from "../pages/Home/FleetSection/CapacityItem";
 import { Link } from "react-router-dom";
 const SliderCard = ({ index, image, name, seats, luggage, handleClick }) => {
   return (
-    <Link to={"/vehicles"}>
+    <Link to={"/vehicles"} state={name}>
       <div
         onClick={() => handleClick(name)}
         className={`slider-card mx-2 pb-8 cursor-pointer ${
@@ -13,7 +13,7 @@ const SliderCard = ({ index, image, name, seats, luggage, handleClick }) => {
         <div
           className={`car-image h-[290px] flex items-center justify-center ${
             index === 0 ? "bg-accent/20" : "bg-zinc-100"
-          } rounded-[1.5rem]`}
+          } rounded-[1.5rem] hover:shadow-md`}
         >
           <img
             className="car w-80 transition"
