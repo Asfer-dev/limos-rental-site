@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 const PrimaryNav = ({ navHidden, screenSize }) => {
   return (
     <nav
-      className={`absolute z-10 rounded-[1rem] shadow-lg md:shadow-none top-20 left-4 md:h-full right-4 sm:w-96 sm:right-4 sm:left-auto py-8 text-center md:py-0 bg-white md:bg-transparent md:static ${
+      className={`absolute z-10 rounded-[1rem] shadow-default md:shadow-none top-20 left-4 md:h-full right-4 sm:w-96 sm:right-4 sm:left-auto py-8 text-center md:py-0 bg-white md:bg-transparent md:static ${
         navHidden && "hidden"
       }`}
     >

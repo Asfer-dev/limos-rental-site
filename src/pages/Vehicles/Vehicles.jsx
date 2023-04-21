@@ -82,8 +82,8 @@ const Vehicles = ({ scrollUp }) => {
                 return car.type.includes("crossover");
             }
           })
-          .map((car) => (
-            <SliderCard handleClick={chooseVehicle} {...car} />
+          .map((car, i) => (
+            <SliderCard handleClick={chooseVehicle} {...car} key={i} />
           ))}
       </div>
     </div>
