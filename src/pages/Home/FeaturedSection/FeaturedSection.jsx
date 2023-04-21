@@ -1,6 +1,7 @@
 import Button from "../../../components/Button";
 import featuredCarImg from "../../../assets/cars/car-cadillac-escalade.png";
 import FeatureItem from "./FeatureItem";
+import { Link } from "react-router-dom";
 
 const FeaturedSection = () => {
   const vehicleFeatures = [
@@ -32,7 +33,9 @@ const FeaturedSection = () => {
           ))}
         </ul>
 
-        <Button>Reserve Now</Button>
+        <Link to={"/vehicles"}>
+          <Button>Reserve Now</Button>
+        </Link>
         <img
           className="w-[450px] md:w-[620px] absolute -top-12 sm:top-24 md:-top-12 right-0"
           src={featuredCarImg}

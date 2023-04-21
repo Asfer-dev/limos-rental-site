@@ -1,6 +1,6 @@
 import SectionHeading from "../../../components/SectionHeading";
 import ServiceCard from "./ServiceCard";
-import services from "./services";
+import services from "../../../data/services";
 
 const ServicesSection = () => {
   return (

@@ -1,4 +1,7 @@
-const NotFound = () => {
+import { useEffect } from "react";
+
+const NotFound = ({ scrollUp }) => {
+  useEffect(() => scrollUp(), []);
   return (
     <div className="container-default text-center mt-32">
       <h1 className="text-5xl font-semibold">Sorry, Not Found</h1>

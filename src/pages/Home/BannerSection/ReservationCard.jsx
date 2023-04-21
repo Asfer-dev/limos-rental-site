@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Button from "../../../components/Button";
+import { Link } from "react-router-dom";
 
 const ReservationCard = () => {
   const [activeMethod, setActiveMethod] = useState(1);
@@ -61,7 +62,9 @@ const ReservationCard = () => {
         </label>
         <input type="time" id="time" />
       </div>
-      <Button>Reserve Now</Button>
+      <Link to={"/vehicles"}>
+        <Button>Reserve Now</Button>
+      </Link>
     </form>
   );
 };

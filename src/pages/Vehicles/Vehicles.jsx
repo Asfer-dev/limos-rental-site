@@ -4,7 +4,7 @@ import SliderCard from "../../components/SliderCard";
 import Button from "../../components/Button";
 import { Link, useLocation } from "react-router-dom";
 
-const Vehicles = () => {
+const Vehicles = ({ scrollUp }) => {
   const location = useLocation();
   const [selectedVehicle, setSelectedVehicle] = useState(cars[0]);
 
@@ -16,6 +16,8 @@ const Vehicles = () => {
       initialVehicle = cars.find((car) => car.name === location.state);
     else initialVehicle = cars[0];
     setSelectedVehicle(initialVehicle);
+
+    scrollUp();
   }, []);
 
   const chooseVehicle = (name) => {

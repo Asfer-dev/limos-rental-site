@@ -1,14 +1,17 @@
-import { useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import Button from "../../components/Button";
+import { useEffect } from "react";
 
-const Reservation = () => {
+const Reservation = ({ scrollUp }) => {
   const location = useLocation();
+
+  useEffect(() => scrollUp(), []);
 
   return (
     <div className="reservation container-default text-center md:text-left mt-28">
       <h1 className="text-5xl md:text-7xl font-semibold">Reservation</h1>
-      <div className="my-8 rounded-[1.5rem] bg-white shadow-lg grid md:grid-cols-2 gap-6">
-        <div className="bg-zinc-100 px-4 flex justify-center items-center rounded-l-[1.5rem]">
+      <div className="my-8 rounded-[1.5rem] overflow-hidden bg-white shadow-default grid md:grid-cols-2 gap-6">
+        <div className="bg-zinc-100 px-4 flex justify-center items-center">
           <img src={location.state.image} alt="selected-vehicle" />
         </div>
         <form className="p-8">
@@ -39,8 +42,10 @@ const Reservation = () => {
           <label className="mb-1 block font-medium" htmlFor="time">
             Choose Time:
           </label>
-          <input className="mb-8" type="time" id="time" />
-          <Button>Reserve Now</Button>
+          <input className="" type="time" id="time" />
+          <Link to={"/thankyou"}>
+            <Button>Reserve Now</Button>
+          </Link>
         </form>
       </div>
     </div>

@@ -2,6 +2,7 @@ import Button from "../../../components/Button";
 import { useEffect } from "react";
 import Aos from "aos";
 import "aos/dist/aos.css";
+import { Link } from "react-router-dom";
 
 const ServiceCard = ({ image, heading, text }) => {
   // scroll animation
@@ -22,7 +23,9 @@ const ServiceCard = ({ image, heading, text }) => {
       <div className="card-content flex flex-col justify-between">
         <h2 className="text-2xl font-semibold mb-3">{heading}</h2>
         <p className="text-neutral-600 mb-3">{text}</p>
-        <Button>Read More</Button>
+        <Link to={"/services"}>
+          <Button>Read More</Button>
+        </Link>
       </div>
     </div>
   );
