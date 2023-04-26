@@ -5,7 +5,7 @@ import SliderCard from "../../../components/SliderCard";
 import { useEffect } from "react";
 import Aos from "aos";
 import "aos/dist/aos.css";
-const CarSlider = ({ activeTab }) => {
+const CarSlider = ({ activeTab, setSelectedVehicle }) => {
   useEffect(() => {
     Aos.init({ duration: 1000 });
   }, []);
@@ -34,6 +34,10 @@ const CarSlider = ({ activeTab }) => {
     },
   };
 
+  const chooseVehicle = (name) => {
+    setSelectedVehicle(cars.find((car) => car.name === name));
+  };
+
   return (
     <div data-aos="fade-left">
       <Carousel
@@ -58,7 +62,13 @@ const CarSlider = ({ activeTab }) => {
             }
           })
           .map((car, i) => (
-            <SliderCard {...car} index={i} key={car.id} />
+            <SliderCard
+              {...car}
+              index={i}
+              key={car.id}
+              setSelectedVehicle={setSelectedVehicle}
+              chooseVehicle={chooseVehicle}
+            />
           ))}
       </Carousel>
     </div>

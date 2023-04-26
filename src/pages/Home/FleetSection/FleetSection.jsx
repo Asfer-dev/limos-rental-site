@@ -3,7 +3,7 @@ import SectionHeading from "../../../components/SectionHeading";
 import CarSlider from "./CarSlider";
 import Tabs from "./Tabs";
 
-const FleetSection = () => {
+const FleetSection = ({ setSelectedVehicle }) => {
   const [activeTab, setActiveTab] = useState(1);
 
   return (
@@ -15,7 +15,10 @@ const FleetSection = () => {
         />
         <Tabs active={activeTab} handleClick={setActiveTab} />
       </div>
-      <CarSlider activeTab={activeTab} />
+      <CarSlider
+        activeTab={activeTab}
+        setSelectedVehicle={setSelectedVehicle}
+      />
     </div>
   );
 };

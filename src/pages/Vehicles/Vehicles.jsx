@@ -2,21 +2,12 @@ import { useEffect, useState } from "react";
 import cars from "../../data/cars";
 import SliderCard from "../../components/SliderCard";
 import Button from "../../components/Button";
-import { Link, useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
 
-const Vehicles = ({ scrollUp }) => {
-  const location = useLocation();
-  const [selectedVehicle, setSelectedVehicle] = useState(cars[0]);
-
+const Vehicles = ({ scrollUp, selectedVehicle, setSelectedVehicle }) => {
   const [filter, setFilter] = useState("1");
 
   useEffect(() => {
-    let initialVehicle;
-    if (location.state)
-      initialVehicle = cars.find((car) => car.name === location.state);
-    else initialVehicle = cars[0];
-    setSelectedVehicle(initialVehicle);
-
     scrollUp();
   }, []);
 
@@ -47,7 +38,7 @@ const Vehicles = ({ scrollUp }) => {
           <p className="mt-1 mb-12">
             Seats: <span className="font-medium">{selectedVehicle.seats}</span>
           </p>
-          <Link to={"/reservation"} state={selectedVehicle}>
+          <Link to={"/reservation"}>
             <Button>Proceed to Reservation</Button>
           </Link>
         </div>
@@ -83,7 +74,7 @@ const Vehicles = ({ scrollUp }) => {
             }
           })
           .map((car, i) => (
-            <SliderCard handleClick={chooseVehicle} {...car} key={i} />
+            <SliderCard {...car} key={i} chooseVehicle={chooseVehicle} />
           ))}
       </div>
     </div>

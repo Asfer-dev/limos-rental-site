@@ -1,11 +1,12 @@
 import { faBriefcase, faPerson } from "@fortawesome/free-solid-svg-icons";
 import CapacityItem from "../pages/Home/FleetSection/CapacityItem";
 import { Link } from "react-router-dom";
-const SliderCard = ({ index, image, name, seats, luggage, handleClick }) => {
+
+const SliderCard = ({ index, image, name, seats, luggage, chooseVehicle }) => {
   return (
     <Link to={"/vehicles"} state={name}>
       <div
-        onClick={() => handleClick(name)}
+        onClick={() => chooseVehicle(name)}
         className={`slider-card mx-2 pb-8 cursor-pointer ${
           index === 0 && "md:ml-16"
         }`}

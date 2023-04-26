@@ -2,7 +2,7 @@ import { Link, useLocation } from "react-router-dom";
 import Button from "../../components/Button";
 import { useEffect } from "react";
 
-const Reservation = ({ scrollUp }) => {
+const Reservation = ({ scrollUp, selectedVehicle }) => {
   const location = useLocation();
 
   useEffect(() => scrollUp(), []);
@@ -12,7 +12,7 @@ const Reservation = ({ scrollUp }) => {
       <h1 className="text-5xl md:text-7xl font-semibold">Reservation</h1>
       <div className="my-8 rounded-[1.5rem] overflow-hidden bg-white shadow-default grid md:grid-cols-2 gap-6">
         <div className="bg-zinc-100 px-4 flex justify-center items-center">
-          <img src={location.state.image} alt="selected-vehicle" />
+          <img src={selectedVehicle.image} alt="selected-vehicle" />
         </div>
         <form className="p-8">
           <label className="mb-1 block font-medium" htmlFor="pick-up">

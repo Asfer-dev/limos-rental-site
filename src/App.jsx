@@ -9,6 +9,8 @@ import Reservation from "./pages/Reservation/Reservation";
 import ThankYou from "./pages/ThankYou/ThankYou";
 import ServicesPage from "./pages/ServicesPage/ServicesPage";
 import BackToTopButton from "./components/BackToTopButton";
+import { useState } from "react";
+import cars from "./data/cars";
 
 function App() {
   const scrollUp = () => {
@@ -18,23 +20,46 @@ function App() {
     });
   };
 
+  const [selectedVehicle, setSelectedVehicle] = useState(cars[0]);
+
   return (
     <>
       <Header />
+
       <Routes>
-        <Route path="/" element={<Home scrollUp={scrollUp} />} />
+        <Route
+          path="/"
+          element={
+            <Home scrollUp={scrollUp} setSelectedVehicle={setSelectedVehicle} />
+          }
+        />
         <Route
           path="/services"
           element={<ServicesPage scrollUp={scrollUp} />}
         />
-        <Route path="/vehicles" element={<Vehicles scrollUp={scrollUp} />} />
+        <Route
+          path="/vehicles"
+          element={
+            <Vehicles
+              scrollUp={scrollUp}
+              selectedVehicle={selectedVehicle}
+              setSelectedVehicle={setSelectedVehicle}
+            />
+          }
+        />
         <Route
           path="/reservation"
-          element={<Reservation scrollUp={scrollUp} />}
+          element={
+            <Reservation
+              scrollUp={scrollUp}
+              selectedVehicle={selectedVehicle}
+            />
+          }
         />
         <Route path="/thankyou" element={<ThankYou scrollUp={scrollUp} />} />
         <Route path="*" element={<NotFound scrollUp={scrollUp} />} />
       </Routes>
+
       <Footer />
       <BackToTopButton scrollUp={scrollUp} />
     </>
