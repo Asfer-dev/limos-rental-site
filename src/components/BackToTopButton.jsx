@@ -9,7 +9,7 @@ const BackToTopButton = ({ scrollUp }) => {
       if (window.scrollY > 200) setBttVisible(true);
       else setBttVisible(false);
     });
-  }, [bttVisible]);
+  }, []);
 
   return (
     <button

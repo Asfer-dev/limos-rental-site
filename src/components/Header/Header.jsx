@@ -7,6 +7,16 @@ import LanguageSelector from "./LanguageSelector";
 const Header = () => {
   const screenMd = 800;
 
+  // shodow for header only when the page is a bit scrolled down
+  const [shadowVisible, setShadowVisible] = useState(false);
+
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 50) setShadowVisible(true);
+      else setShadowVisible(false);
+    });
+  }, []);
+
   // state for knowing when the navigation bar is hidden or not(for mobile)
   const [navHidden, setNavHidden] = useState(true);
 
@@ -25,7 +35,11 @@ const Header = () => {
   }, [screenSize]);
 
   return (
-    <header className="py-6 fixed z-10 bg-white left-0 right-0 top-0">
+    <header
+      className={`py-6 fixed z-10 bg-white left-0 right-0 top-0 ${
+        shadowVisible && "shadow-default"
+      }`}
+    >
       <div className="container-big flex justify-between">
         <a href="/">
           <img className="w-28" src={logo} alt="LIMO-logo" />
