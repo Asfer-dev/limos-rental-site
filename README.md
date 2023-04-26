@@ -14,16 +14,16 @@ LIMOS is a website for luxury limousine rentals, designed to provide customers w
 
 ## How to Use
 
-1. Visit the LIMOS website at [limos](https://limos-rental-site.vercel.app/)
-1. Browse the available limousine models and select the one that fits your needs
+1.Visit the LIMOS website at [limos](https://limos-rental-site.vercel.app/)
+1.Browse the available limousine models and select the one that fits your needs
 
 ![vehicles-page](screenshots/vehicles-page.png)
 
-1. Fill out the booking form with your details and submit
+1.Fill out the booking form with your details and submit
 
 ![reservation-page](screenshots/reservation-page.png)
 
-1. Enjoy your premium transportation experience with LIMOS!
+1.Enjoy your premium transportation experience with LIMOS!
 
 ## Technology Stack
 
@@ -36,4 +36,4 @@ LIMOS is built using the following technologies:
 
 ## Contributing
 
-We welcome contributions from the community! If you have any suggestions, bug reports, or feature requests, please open an issue on our GitHub repository.
+I welcome contributions from the community! If you have any suggestions, bug reports, or feature requests, please open an issue on my GitHub repository.
