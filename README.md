@@ -2,7 +2,7 @@
 
 LIMOS is a website for luxury limousine rentals, designed to provide customers with a premium transportation experience for any occasion.
 
-![home-page](screenshots/homepage.png)
+![home-page](screenshots/home-page.png)
 
 ## Features
 
