@@ -22,6 +22,13 @@ function App() {
 
   const [selectedVehicle, setSelectedVehicle] = useState(cars[0]);
 
+  const [reservationInfo, setReservationInfo] = useState({
+    pickup: "",
+    dropoff: "",
+    date: "",
+    time: "",
+  });
+
   return (
     <>
       <Header />
@@ -30,7 +37,12 @@ function App() {
         <Route
           path="/"
           element={
-            <Home scrollUp={scrollUp} setSelectedVehicle={setSelectedVehicle} />
+            <Home
+              scrollUp={scrollUp}
+              setSelectedVehicle={setSelectedVehicle}
+              reservationInfo={reservationInfo}
+              setReservationInfo={setReservationInfo}
+            />
           }
         />
         <Route
@@ -53,6 +65,8 @@ function App() {
             <Reservation
               scrollUp={scrollUp}
               selectedVehicle={selectedVehicle}
+              reservationInfo={reservationInfo}
+              setReservationInfo={setReservationInfo}
             />
           }
         />

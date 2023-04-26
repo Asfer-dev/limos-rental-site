@@ -2,7 +2,7 @@ import { useState } from "react";
 import Button from "../../../components/Button";
 import { Link } from "react-router-dom";
 
-const ReservationCard = () => {
+const ReservationCard = ({ reservationInfo, setReservationInfo }) => {
   const [activeMethod, setActiveMethod] = useState(1);
 
   const handleClick = (e, method) => {
@@ -44,8 +44,22 @@ const ReservationCard = () => {
           Flat Rate
         </button>
       </div>
-      <input placeholder="Pick Up Address" type="text" />
-      <input placeholder="Drop Off Address" type="text" />
+      <input
+        onChange={(e) =>
+          setReservationInfo({ ...reservationInfo, pickup: e.target.value })
+        }
+        placeholder="Pick Up Address"
+        type="text"
+        value={reservationInfo.pickup}
+      />
+      <input
+        onChange={(e) =>
+          setReservationInfo({ ...reservationInfo, dropoff: e.target.value })
+        }
+        placeholder="Drop Off Address"
+        type="text"
+        value={reservationInfo.dropoff}
+      />
       <select
         className="bg-gray-100 mb-3 rounded-[0.6rem] py-2 px-4 w-full"
         style={{ appearance: "none" }}
@@ -55,12 +69,25 @@ const ReservationCard = () => {
       >
         <option value="one_way">One Way</option>
       </select>
-      <input type="date" />
+      <input
+        onChange={(e) =>
+          setReservationInfo({ ...reservationInfo, date: e.target.value })
+        }
+        type="date"
+        value={reservationInfo.date}
+      />
       <div className="flex space-x-4 items-center">
         <label className="text-gray-700 w-5/6 mb-3" htmlFor="time">
           Pick Up Time
         </label>
-        <input type="time" id="time" />
+        <input
+          onChange={(e) =>
+            setReservationInfo({ ...reservationInfo, time: e.target.value })
+          }
+          type="time"
+          id="time"
+          value={reservationInfo.time}
+        />
       </div>
       <Link to={"/vehicles"}>
         <Button>Reserve Now</Button>

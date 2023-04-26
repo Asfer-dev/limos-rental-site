@@ -2,9 +2,12 @@ import { Link, useLocation } from "react-router-dom";
 import Button from "../../components/Button";
 import { useEffect } from "react";
 
-const Reservation = ({ scrollUp, selectedVehicle }) => {
-  const location = useLocation();
-
+const Reservation = ({
+  scrollUp,
+  selectedVehicle,
+  reservationInfo,
+  setReservationInfo,
+}) => {
   useEffect(() => scrollUp(), []);
 
   return (

@@ -5,7 +5,7 @@ const Service = ({ heading, image, text }) => {
   return (
     <div className="mb-16">
       <img className="mx-auto" src={image} alt={"service-" + heading} />
-      <h2 className="text-4xl font-medium mt-12">{heading}</h2>
+      <h2 className="text-4xl font-semibold mt-12">{heading}</h2>
       <p className="text-zinc-600 mt-4">
         {text}
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda

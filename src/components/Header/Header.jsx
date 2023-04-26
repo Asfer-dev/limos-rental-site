@@ -27,7 +27,7 @@ const Header = () => {
   return (
     <header className="py-6 fixed z-10 bg-white left-0 right-0 top-0">
       <div className="container-big flex justify-between">
-        <a href="#">
+        <a href="/">
           <img className="w-28" src={logo} alt="LIMO-logo" />
         </a>
         <PrimaryNav screenSize={screenSize} navHidden={navHidden} />
