@@ -14,7 +14,7 @@ LIMOS is a website for luxury limousine rentals, designed to provide customers w
 
 ## How to Use
 
-1. Visit the LIMOS website at [limos](https://www.limos-rental-site.vercel.app/)
+1. Visit the LIMOS website at [limos](https://limos-rental-site.vercel.app/)
 1. Browse the available limousine models and select the one that fits your needs
 
 ![vehicles-page](screenshots/vehicles.png)
