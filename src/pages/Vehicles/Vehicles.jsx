@@ -3,6 +3,8 @@ import cars from "../../data/cars";
 import SliderCard from "../../components/SliderCard";
 import Button from "../../components/Button";
 import { Link } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 
 const Vehicles = ({ scrollUp, selectedVehicle, setSelectedVehicle }) => {
   const [filter, setFilter] = useState("1");
@@ -24,12 +26,13 @@ const Vehicles = ({ scrollUp, selectedVehicle, setSelectedVehicle }) => {
         class vehicles.
       </p>
       <div className="grid md:grid-cols-2 gap-12 my-16">
-        <div className="bg-accent/40 p-4 rounded-[1rem]">
+        <div className="bg-accent/40 p-4 rounded-[1rem] flex items-center">
           <img className="w-full" src={selectedVehicle.image} alt="" />
         </div>
         <div className="mt-4">
           <h2 className="text-4xl font-semibold">{selectedVehicle.name}</h2>
           <p className="text-zinc-600 mt-4">{selectedVehicle.detail}</p>
+          <hr className="mt-4" />
           <h3 className="mt-8 text-2xl font-medium">Capacity</h3>
           <p className="mt-1">
             Luggage:{" "}
@@ -39,7 +42,13 @@ const Vehicles = ({ scrollUp, selectedVehicle, setSelectedVehicle }) => {
             Seats: <span className="font-medium">{selectedVehicle.seats}</span>
           </p>
           <Link to={"/reservation"}>
-            <Button>Proceed to Reservation</Button>
+            <Button>
+              Book Now
+              <FontAwesomeIcon
+                icon={faArrowRight}
+                className="text-white ml-4"
+              />
+            </Button>
           </Link>
         </div>
       </div>
@@ -59,7 +68,7 @@ const Vehicles = ({ scrollUp, selectedVehicle, setSelectedVehicle }) => {
         <option value="3">Business</option>
         <option value="4">Crossover</option>
       </select>
-      <div className="grid sm:grid-cols-3 md:grid-cols-3">
+      <div className="grid sm:grid-cols-2 md:grid-cols-3">
         {cars
           .filter((car) => {
             switch (filter) {

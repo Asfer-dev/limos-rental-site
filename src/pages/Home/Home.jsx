@@ -5,22 +5,14 @@ import FeaturesSection from "./FeaturesSection/FeaturesSection";
 import FleetSection from "./FleetSection/FleetSection";
 import ServicesSection from "./ServicesSection/ServicesSection";
 
-const Home = ({
-  scrollUp,
-  setSelectedVehicle,
-  reservationInfo,
-  setReservationInfo,
-}) => {
+const Home = ({ scrollUp, setSelectedVehicle }) => {
   useEffect(() => {
     scrollUp();
   }, []);
 
   return (
     <>
-      <BannerSection
-        reservationInfo={reservationInfo}
-        setReservationInfo={setReservationInfo}
-      />
+      <BannerSection />
       <ServicesSection />
       <FleetSection setSelectedVehicle={setSelectedVehicle} />
       <FeaturesSection />

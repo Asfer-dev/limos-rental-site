@@ -18,12 +18,12 @@ const CarSlider = ({ activeTab, setSelectedVehicle }) => {
       partialVisibilityGutter: 40,
     },
     desktop: {
-      breakpoint: { max: 3000, min: 800 },
+      breakpoint: { max: 3000, min: 1000 },
       items: 3,
       partialVisibilityGutter: 40,
     },
     tablet: {
-      breakpoint: { max: 800, min: 480 },
+      breakpoint: { max: 1000, min: 480 },
       items: 2,
       partialVisibilityGutter: 30,
     },
@@ -39,7 +39,7 @@ const CarSlider = ({ activeTab, setSelectedVehicle }) => {
   };
 
   return (
-    <div data-aos="fade-left">
+    <div className="md:pl-16" data-aos="fade-left">
       <Carousel
         responsive={responsive}
         showDots={true}
@@ -66,7 +66,6 @@ const CarSlider = ({ activeTab, setSelectedVehicle }) => {
               {...car}
               index={i}
               key={car.id}
-              setSelectedVehicle={setSelectedVehicle}
               chooseVehicle={chooseVehicle}
             />
           ))}

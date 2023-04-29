@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import Button from "../../../components/Button";
 import ReservationCard from "./ReservationCard";
-const BannerSection = (reservationInfo, setReservationInfo) => {
+const BannerSection = () => {
   return (
     <div className="banner relative container-big rounded-[1.5rem] text-center mt-24">
       <h1 className="text-5xl md:text-8xl font-semibold pt-8 tracking-wide">
@@ -14,10 +14,7 @@ const BannerSection = (reservationInfo, setReservationInfo) => {
       <Link to={"/vehicles"}>
         <Button>Open Fleet</Button>
       </Link>
-      <ReservationCard
-        reservationInfo={reservationInfo}
-        setReservationInfo={setReservationInfo}
-      />
+      <ReservationCard />
     </div>
   );
 };

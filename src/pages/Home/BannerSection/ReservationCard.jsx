@@ -2,12 +2,24 @@ import { useState } from "react";
 import Button from "../../../components/Button";
 import { Link } from "react-router-dom";
 
-const ReservationCard = ({ reservationInfo, setReservationInfo }) => {
+const ReservationCard = () => {
   const [activeMethod, setActiveMethod] = useState(1);
 
   const handleClick = (e, method) => {
     setActiveMethod(method);
     e.preventDefault();
+  };
+
+  // Reservation Inputs
+  const [reservationInfo, setReservationInfo] = useState({
+    pickup: "",
+    dropoff: "",
+    date: "",
+    time: "",
+  });
+
+  const handleInput = (e) => {
+    setReservationInfo({ ...reservationInfo, [e.target.name]: e.target.value });
   };
 
   return (
@@ -45,20 +57,18 @@ const ReservationCard = ({ reservationInfo, setReservationInfo }) => {
         </button>
       </div>
       <input
-        onChange={(e) =>
-          setReservationInfo({ ...reservationInfo, pickup: e.target.value })
-        }
+        onChange={(e) => handleInput(e)}
+        value={reservationInfo.pickup}
+        name="pickup"
         placeholder="Pick Up Address"
         type="text"
-        value={reservationInfo.pickup}
       />
       <input
-        onChange={(e) =>
-          setReservationInfo({ ...reservationInfo, dropoff: e.target.value })
-        }
+        onChange={(e) => handleInput(e)}
+        value={reservationInfo.dropoff}
+        name="dropoff"
         placeholder="Drop Off Address"
         type="text"
-        value={reservationInfo.dropoff}
       />
       <select
         className="bg-gray-100 mb-3 rounded-[0.6rem] py-2 px-4 w-full"
@@ -70,23 +80,21 @@ const ReservationCard = ({ reservationInfo, setReservationInfo }) => {
         <option value="one_way">One Way</option>
       </select>
       <input
-        onChange={(e) =>
-          setReservationInfo({ ...reservationInfo, date: e.target.value })
-        }
-        type="date"
+        onChange={(e) => handleInput(e)}
         value={reservationInfo.date}
+        name="date"
+        type="date"
       />
       <div className="flex space-x-4 items-center">
         <label className="text-gray-700 w-5/6 mb-3" htmlFor="time">
           Pick Up Time
         </label>
         <input
-          onChange={(e) =>
-            setReservationInfo({ ...reservationInfo, time: e.target.value })
-          }
+          onChange={(e) => handleInput(e)}
+          value={reservationInfo.time}
+          name="time"
           type="time"
           id="time"
-          value={reservationInfo.time}
         />
       </div>
       <Link to={"/vehicles"}>

@@ -7,17 +7,15 @@ const SliderCard = ({ index, image, name, seats, luggage, chooseVehicle }) => {
     <Link to={"/vehicles"} state={name}>
       <div
         onClick={() => chooseVehicle(name)}
-        className={`slider-card mx-2 pb-8 cursor-pointer ${
-          index === 0 && "md:ml-16"
-        }`}
+        className={`slider-card mx-2 pb-8 cursor-pointer ${index === 0 && ""}`}
       >
         <div
-          className={`car-image h-[290px] flex items-center justify-center ${
+          className={`car-image w-full h-[290px] flex items-center justify-center ${
             index === 0 ? "bg-accent/20" : "bg-zinc-100"
-          } rounded-[1.5rem] hover:shadow-md`}
+          } rounded-[1.5rem] hover:shadow-md px-8`}
         >
           <img
-            className="car w-80 transition"
+            className="car w-full transition"
             src={image}
             alt={name + " - image"}
           />

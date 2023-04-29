@@ -1,13 +1,10 @@
-import { Link, useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
 import Button from "../../components/Button";
 import { useEffect } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 
-const Reservation = ({
-  scrollUp,
-  selectedVehicle,
-  reservationInfo,
-  setReservationInfo,
-}) => {
+const Reservation = ({ scrollUp, selectedVehicle }) => {
   useEffect(() => scrollUp(), []);
 
   return (
@@ -51,6 +48,12 @@ const Reservation = ({
           </Link>
         </form>
       </div>
+      <Link to={"/vehicles"}>
+        <Button>
+          <FontAwesomeIcon icon={faArrowLeft} className="text-white mr-4" />
+          Select Vehicle
+        </Button>
+      </Link>
     </div>
   );
 };
