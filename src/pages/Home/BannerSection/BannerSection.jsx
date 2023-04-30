@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import Button from "../../../components/Button";
 import ReservationCard from "./ReservationCard";
+
 const BannerSection = () => {
   return (
     <div className="banner relative container-big rounded-[1.5rem] text-center mt-24">
@@ -14,6 +15,7 @@ const BannerSection = () => {
       <Link to={"/vehicles"}>
         <Button>Open Fleet</Button>
       </Link>
+
       <ReservationCard />
     </div>
   );

@@ -1,11 +1,15 @@
 import { Link } from "react-router-dom";
 import Button from "../../components/Button";
-import { useEffect } from "react";
+import { useContext, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
+import ReservationContext from "../../contexts/ReservationContext";
 
 const Reservation = ({ scrollUp, selectedVehicle }) => {
   useEffect(() => scrollUp(), []);
+
+  const { reservationInfo, handleInput } = useContext(ReservationContext);
+  console.log(reservationInfo);
 
   return (
     <div className="reservation container-default text-center md:text-left mt-28">
@@ -18,11 +22,25 @@ const Reservation = ({ scrollUp, selectedVehicle }) => {
           <label className="mb-1 block font-medium" htmlFor="pick-up">
             Pick Up:
           </label>
-          <input placeholder="Pick Up Address" type="text" id="pick-up" />
+          <input
+            onChange={(e) => handleInput(e)}
+            value={reservationInfo.pickup}
+            placeholder="Pick Up Address"
+            type="text"
+            name="pickup"
+            id="pick-up"
+          />
           <label className="mb-1 block font-medium" htmlFor="drop-off">
             Drop Off:
           </label>
-          <input placeholder="Drop Off Address" type="text" id="drop-off" />
+          <input
+            onChange={(e) => handleInput(e)}
+            value={reservationInfo.dropoff}
+            placeholder="Drop Off Address"
+            type="text"
+            name="dropoff"
+            id="drop-off"
+          />
           <label className="mb-1 block font-medium" htmlFor="one-way">
             One/Two way:
           </label>
@@ -38,11 +56,24 @@ const Reservation = ({ scrollUp, selectedVehicle }) => {
           <label className="mb-1 block font-medium" htmlFor="date">
             Choose Date:
           </label>
-          <input type="date" id="date" />
+          <input
+            onChange={(e) => handleInput(e)}
+            value={reservationInfo.date}
+            type="date"
+            name="date"
+            id="date"
+          />
           <label className="mb-1 block font-medium" htmlFor="time">
             Choose Time:
           </label>
-          <input className="" type="time" id="time" />
+          <input
+            onChange={(e) => handleInput(e)}
+            value={reservationInfo.time}
+            className=""
+            type="time"
+            name="time"
+            id="time"
+          />
         </form>
       </div>
       <div className="flex flex-col sm:flex-row gap-4 justify-between px-8">

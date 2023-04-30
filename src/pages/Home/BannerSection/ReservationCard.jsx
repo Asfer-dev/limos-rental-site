@@ -1,6 +1,7 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
 import Button from "../../../components/Button";
 import { Link } from "react-router-dom";
+import ReservationContext from "../../../contexts/ReservationContext";
 
 const ReservationCard = () => {
   const [activeMethod, setActiveMethod] = useState(1);
@@ -11,16 +12,8 @@ const ReservationCard = () => {
   };
 
   // Reservation Inputs
-  const [reservationInfo, setReservationInfo] = useState({
-    pickup: "",
-    dropoff: "",
-    date: "",
-    time: "",
-  });
-
-  const handleInput = (e) => {
-    setReservationInfo({ ...reservationInfo, [e.target.name]: e.target.value });
-  };
+  const { reservationInfo, handleInput } = useContext(ReservationContext);
+  console.log(reservationInfo);
 
   return (
     <form className="reservation reserve-card w-[320px] p-8 pt-[4.5rem] absolute bottom-8 right-16 shadow-lg bg-white rounded-[1.5rem] text-left text-[15px] hidden md:block">
