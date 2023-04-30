@@ -43,17 +43,19 @@ const Reservation = ({ scrollUp, selectedVehicle }) => {
             Choose Time:
           </label>
           <input className="" type="time" id="time" />
-          <Link to={"/thankyou"}>
-            <Button>Reserve Now</Button>
-          </Link>
         </form>
       </div>
-      <Link to={"/vehicles"}>
-        <Button>
-          <FontAwesomeIcon icon={faArrowLeft} className="text-white mr-4" />
-          Select Vehicle
-        </Button>
-      </Link>
+      <div className="flex flex-col sm:flex-row gap-4 justify-between px-8">
+        <Link to={"/vehicles"}>
+          <Button>
+            <FontAwesomeIcon icon={faArrowLeft} className="text-white mr-4" />
+            Select Vehicle
+          </Button>
+        </Link>
+        <Link to={"/thankyou"}>
+          <Button>Reserve Now</Button>
+        </Link>
+      </div>
     </div>
   );
 };
