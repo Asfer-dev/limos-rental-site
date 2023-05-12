@@ -34,6 +34,10 @@ LIMOS is built using the following technologies:
 - SCSS
 - Tailwind CSS
 
+## Upcoming Features
+
+1. Integrated Email Newsletter subscription system.
+
 ## Contributing
 
 I welcome contributions from the community! If you have any suggestions, bug reports, or feature requests, please open an issue on my GitHub repository.
