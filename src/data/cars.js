@@ -2,6 +2,7 @@ import imgBenzSClass from "../assets/cars/car-benz-s-class.png";
 import imgBenzVClass from "../assets/cars/car-benz-v-class.png";
 import imgAudiA8 from "../assets/cars/car-audi-a8.png";
 import imgEscalade from "../assets/cars/car-cadillac-escalade.png";
+import imgRoyce from "../assets/cars/car-rolls-royce-ghost.png";
 const cars = [
   {
     id: 1,
@@ -41,7 +42,17 @@ const cars = [
     image: imgEscalade,
     seats: 4,
     luggage: 4,
-    type: ["luxury", "business"],
+    type: ["luxury", "business", "crossover"],
+  },
+  {
+    id: 5,
+    name: "Rolls Royce Ghost",
+    detail:
+      "The Rolls-Royce Ghost is a luxury sedan known for its elegance, comfort, and performance. The Ghost also comes equipped with advanced technology, such as a 12.3-inch infotainment screen, adaptive headlights. Additionally, the interior is crafted from high-quality materials, including soft leather and real wood trim, providing a refined and luxurious experience for passengers.",
+    image: imgRoyce,
+    seats: 5,
+    luggage: 5,
+    type: ["luxury", "business", "crossover"],
   },
 ];
 

@@ -81,6 +81,11 @@
     margin-inline: auto;
   }
 
+  .container-small {
+    width: min(950px, 100vw - 4rem);
+    margin-inline: auto;
+  }
+
   .shadow-default {
     box-shadow: 0px 2px 19px 1px rgba(0,0,0,0.1);
     -webkit-box-shadow: 0px 2px 19px 1px rgba(0,0,0,0.1);

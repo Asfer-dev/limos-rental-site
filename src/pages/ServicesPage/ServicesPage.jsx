@@ -34,7 +34,7 @@ const ServicesPage = ({ scrollUp }) => {
         covered.
       </p>
 
-      <div className="mt-20">
+      <div className="mt-20 container-small">
         {services.map((service) => (
           <Service {...service} key={service.heading} />
         ))}
